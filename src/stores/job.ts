@@ -43,8 +43,8 @@ export const useJobStore = defineStore('job', {
   actions: {
     async fetchJobs(): Promise<void> {
       const [employers, jobs] = await Promise.all([
-        ky('/employers.json').json<EmployersDto>(),
-        ky('/jobs.json').json<JobsDto>()
+        ky(`${import.meta.env.BASE_URL}employers.json`).json<EmployersDto>(),
+        ky(`${import.meta.env.BASE_URL}jobs.json`).json<JobsDto>()
       ])
       this.jobs = transformJobsDto(jobs)
       this.employers = employers

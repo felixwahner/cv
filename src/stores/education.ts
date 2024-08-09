@@ -36,7 +36,9 @@ export const useEducationStore = defineStore('education', {
   },
   actions: {
     async fetchEducation(): Promise<void> {
-      const education = await ky('/education.json').json<EducationListDto>()
+      const education = await ky(
+        `${import.meta.env.BASE_URL}/education.json`
+      ).json<EducationListDto>()
       this.education = transformEducationDto(education)
     }
   }
