@@ -24,11 +24,9 @@ import ContactSidebar from '../components/ContactSidebar.vue'
 h1 {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 3rem;
   margin-top: 12px;
   color: var(--vt-c-black-mute);
-}
-h1 {
+  font-size: 2.2rem;
   margin-bottom: 0;
   line-height: 1;
   padding-left: 24px;
@@ -38,14 +36,17 @@ h2 {
   padding-left: 24px;
   line-height: 1;
   margin-bottom: 48px;
+  font-size: 1.3rem;
 }
 @media (min-width: 1080px)  {
-h1 {
-  padding-left: 144px;
-}
-h2 {
-  padding-left: 144px;
-}
+  h1 {
+    padding-left: 144px;
+    font-size: 3rem;
+  }
+  h2 {
+    padding-left: 144px;
+    font-size: 1.75rem;
+  }
 }
 .divider {
   display: block;

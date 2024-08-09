@@ -24,4 +24,9 @@ h2 {
   padding-left: 18px;
   text-transform: uppercase;
 }
+@media (min-width: 1080px)  {
+  h2 {
+    padding-left: 0;
+  }
+}
 </style>

@@ -17,8 +17,10 @@ const { getOpenDetailsById } = storeToRefs(settingsStore)
 </script>
 <template>
   <article class="card">
-    <strong>{{ employer?.name }}</strong>
-    ({{ job?.dateSpan }}: {{ job?.dateStart }} - {{ job?.dateEnd }})
+    <div class="subtitle">
+      <strong>{{ employer?.name }}</strong>
+      ({{ job?.dateSpan }}: {{ job?.dateStart }} - {{ job?.dateEnd }})
+    </div>
     <h3>{{ job?.title }}</h3>
     <details v-bind:open="getOpenDetailsById(jobId)" @click="settingsStore.toggleOpenState(jobId)">
       <summary>
@@ -35,7 +37,7 @@ const { getOpenDetailsById } = storeToRefs(settingsStore)
 </template>
 <style scoped>
 summary {
-  list-style-type: '🛈 ';
+  list-style-type: '» ';
   &::marker {
     color: var(--purple-brand);
     font-size: 1.2em;
@@ -54,6 +56,15 @@ details {
 }
 .description {
   margin-top: 12px;
+}
+.subtitle {
+  position:relative;
+  top: -4px;
+}
+@media (min-width: 1080px)  {
+  .subtitle {
+    position: static;
+  }
 }
 strong {
   font-weight: 500;

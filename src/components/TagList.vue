@@ -15,16 +15,25 @@ const props = defineProps<{
   </div>
 </template>
 <style scoped>
-.container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
+@media (min-width: 1080px)  {
+  .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
 }
 strong {
+  display: block;
   font-size: 0.7rem;
   font-weight: 600;
   width: 15%;
   text-transform: uppercase;
+  margin-top: 12px;
+}
+@media (min-width: 1080px)  {
+  strong {
+    display: inline-block;
+  }
 }
 .taglist {
   list-style: none;

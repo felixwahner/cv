@@ -8,7 +8,7 @@ const education = educationStore.getEducationById(props.educationId)
 </script>
 <template>
   <article class="card">
-    <strong>{{ education?.name }}</strong
+    <strong class="subtitle">{{ education?.name }}</strong
     ><br />
     {{ education?.dateStart }} - {{ education?.dateEnd }}
     <h3>{{ education?.type }}</h3>
@@ -30,6 +30,15 @@ h3 {
   cursor: pointer;
   &:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+.subtitle {
+  position:relative;
+  top: -4px;
+}
+@media (min-width: 1080px)  {
+  .subtitle {
+    position: static;
   }
 }
 strong {
