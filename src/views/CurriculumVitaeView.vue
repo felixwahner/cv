@@ -1,0 +1,84 @@
+<script setup lang="ts">
+import CurriculumVitae from '../components/CurriculumVitae.vue'
+import ContactSidebar from '../components/ContactSidebar.vue'
+</script>
+
+<template>
+  <main class="main">
+    <header class="header">
+      <h1 property="name">Felix Wahner</h1>
+      <h2>{ Fullstack Web Developer }</h2>
+      <hr class="divider" />
+    </header>
+    <div class="content">
+      <div class="cv">
+        <CurriculumVitae />
+      </div>
+      <aside class="sidebar">
+        <ContactSidebar />
+      </aside>
+    </div>
+  </main>
+</template>
+<style scoped>
+h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-top: 12px;
+  color: var(--vt-c-black-mute);
+}
+h1 {
+  margin-bottom: 0;
+  line-height: 1;
+  padding-left: 144px;
+}
+h2 {
+  color: var(--purple-brand);
+  margin: 0 0 36px 0;
+  padding-left: 144px;
+}
+.divider {
+  display: block;
+  border: none;
+  height: 12px;
+  width: 100%;
+  background-color: var(--vt-c-black-mute);
+  margin-bottom: 24px;
+}
+.main {
+  border-top: 20px solid var(--purple-brand);
+  border-bottom: 40px solid var(--purple-brand);
+  padding: 24px 0 48px 0;
+  margin: 0 24px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.content {
+  display: grid;
+  grid-template-columns: 1.61803398875fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 24px;
+}
+.header {
+  position: relative;
+}
+.header::before {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(151, 18, 84, 0.2);
+  content: '>';
+  position: absolute;
+  color: var(--purple-brand);
+  font-size: 8em;
+  font-weight: 800;
+  left: 12px;
+  top: -12px;
+  line-height: 0.5;
+  padding-left: 12px;
+  color: #fff;
+}
+</style>

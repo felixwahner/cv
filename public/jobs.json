@@ -1,0 +1,128 @@
+{
+  "1": {
+    "employerId": "1",
+    "title": "Intern (Screendesign)",
+    "dateStart": 1044054000000,
+    "dateEnd": 1057010400000,
+    "shortDescription": "Started my journey in design and development (already tought myself HTML and Design beforehand)",
+    "description": "I applied as an intern for w3design., a well established web design agency and got the job. Since i was already doing websites and design myself for quite a while (we even managed to do a whole eCommerce shop based on xtCommerce with some of my friends - sadly it never launched successfully) I thought I'd already know a lot. But to my surprise I was nowhere near the level of professionalism as the people working here. I instantly started to soak up every piece of knowlegde I could and was quickly able to do basic graphics work for client projects in Photoshop. I knew I had found my dream job and worked as hard as I could to stay for an apprenticeship.",
+    "skills": ["Design"],
+    "software": ["Photoshop", "Illustrator"]
+  },
+  "2": {
+    "employerId": "1",
+    "title": "Apprentice (Media Designer)",
+    "dateStart": 1059688800000,
+    "dateEnd": 1136070000000,
+    "shortDescription": "Learning the basic skills for website design and conception as well as frontend-development while working on customer projects",
+    "description": "During my apprenticeship I learned the basic skills for everything related to building a website. From ideation to wireframing, designing in Photoshop and Illustrator to implementing HTML and CMS-Templates. Since it was still the time of Netscape 4.7 and ie 4, we also did a lot animations and banners in Adobe Flash. Some months into my apprenticeship I already worked on client projects full time. And oh, boy: I virtuosly coded HTML-Table-Layouts optimized for a stunning resolution of 800x600px, used spacer-gifs, exported repeating background-images for buttons and knew all the browser hacks to keep IE4 happy. I finished my apprenticeship after 2.5 years (it usually takes 3 years) because my grades were good and I was allowed by the IHK (institution that serves as a control instance for the apprenticeship) to do my exams earlier.",
+    "skills": ["HTML", "CSS", "PHP", "Twig", "ActionScript", "Design", "Wireframing"],
+    "software": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe Flash",
+      "SoftQuad HotMetal",
+      "Notepad++",
+      "Typo3",
+      "webboard|cms",
+      "Axure RP"
+    ]
+  },
+  "3": {
+    "employerId": "1",
+    "title": "Junior ... Senior Screendesigner",
+    "dateStart": 1138748400000,
+    "dateEnd": 1306879200000,
+    "shortDescription": "Getting familiar with JavaScript using early DHTML and jQuery, expanding my knowledge to the backend with PHP, implementing the first build chains with grunt and bower, doing large projects and project leads on my own, getting in touch with eCommerce and Magento",
+    "description": "After finishing my apprenticeship as a media designer, I started in an entry-level Screendesigner position and worked my way up to being a Senior in the coming years. The title Screendesigner nowadays might be misleading: All of the Screendesigners in the company also did what would be called frontend-development in todays vocabulary: I created templates for our internal, properitary PHP based cms (webboard|cms) and began to implement dynamic frontends with jQuery. The more time went by, the more I also learned about the backend part of websites (i.e. building APIs or business logic for controllers). Since our internal CMS was properitary, several customers requested to use something more accessible to the public that can be extended or taken over by other service providers. That's why we opted to expand our services and started using Typo3 and wordpress. A few years into my Screendesigner career the agencies focus shifted for strategical reasons and we built a lot of eCommerce stores using Magento. In all these years, the JavaScript ecosystem began to flourish and the first build tools were on the rise. I was really hooked for all the exciting new technology and early adopted tools like grunt and bower into our internal workflow. It was also at that time when the first CSS Frameworks like Bootstrap, 960.gs and Foundation were released, which we happily accepted and utilized to improve our workflows (since all the CSS hacks needed back then were really a pain to deal with).",
+    "skills": [
+      "HTML",
+      "CSS",
+      "PHP",
+      "Twig",
+      "JavaScript",
+      "ActionScript",
+      "Design",
+      "Wireframing",
+      "XML"
+    ],
+    "software": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Sublime Editor",
+      "Typo3",
+      "webboard|cms",
+      "Magento",
+      "Bower",
+      "Grunt",
+      "Axure RP"
+    ]
+  },
+  "4": {
+    "employerId": "1",
+    "title": "Teamlead Frontend-Development",
+    "dateStart": 1309471200000,
+    "dateEnd": 1322694000000,
+    "shortDescription": "People management, Mentoring, technical concepts",
+    "description": "description",
+    "skills": ["HTML", "CSS", "PHP", "Twig", "ActionScript", "Design", "Wireframe"],
+    "software": [
+      "Photoshop",
+      "Illustrator",
+      "Flash",
+      "HotMetal",
+      "Sublime Editor",
+      "Typo3",
+      "webboard|cms"
+    ]
+  },
+  "5": {
+    "employerId": "2",
+    "title": "Engineering Manager",
+    "dateStart": 1325372400000,
+    "dateEnd": 1420066800000,
+    "shortDescription": "People management, setting up CI/CD and virtualization for streamling development environments, writing technical documentation, exposure via blog articles and talks",
+    "description": "The company neuwaerts resulted from a merger of my former employer w3design. and a communication agency called hms69. My position changed in this process, and I was responsible for the whole engineering department (around 10 people) from now on. To be prepared for the new challenges that arose with the role, I completed several management trainings. My focus shifted towards doing people management as well as strategic and business-related tasks. I wrote technical concepts, documentation, and offers for client projects, was involved in planning financial and human resources. During this time, we realized a lot of large website launches for regional and international clients mainly using Typo3, wordpress and processwire. For example, the relaunch of the local transport association of Hannover (üstra) which included several JavaScript-based micro-applications built with Vue.js 1 (i.e. lost and found search tool, trip planning, events calendar), which I helped and planned to build. Aside from these tasks, I also set up tooling for the virtualization of our development environment using vagrant (sadly, Docker was not a thing back then) as well as introducing CI/CD for our projects with GitLab and automated deployments. I was also doing networking for talent aquisition and writing blogposts / holding talks about technology related topics at local meetups.",
+    "skills": ["Management", "Vagrant", "GIT", "CI/CD", "yaml"],
+    "software": ["Vagrant", "PhpStorm", "GitLab CI"]
+  },
+  "6": {
+    "employerId": "2",
+    "title": "Developer Evangelist",
+    "dateStart": 1422745200000,
+    "dateEnd": 1561932000000,
+    "shortDescription": "Mentoring, enabling teams to use modern frontend technologies, building web- and cross-platform apps using angular.js, vue.js and Adobe Cordova, building REST APIs with node.js and PHP",
+    "description": "Since I didn't feel too comfortable with primarily doing people management tasks for a long time anymore, I decided to switch back to a more hands-on technology role. Although developer evangelist was more of a description of what I was eager to do (I got to pick the title myself), it was somewhat fitting to what I ended up doing. A big customer (expert Warenvertrieb Gmbh, the second-biggest electronics retailer in Europe) specifically requested me to join their team for a longer period and mentor them on how to build modern frontend applications with angular.js and node. Initially booked for 6 months, they re-booked me for another 3 years as an external consultant and programmer. Within this time, we built and released an iOS (Apache Cordova) app called expert NEO which streamlined and combined all the internal ERP, inventory management and booking services into a single, easy-to-use application for retail store workers. We also built the accompanying microservices that collected data from internal APIs using node (koa.js). To keep read and write operations in sync when booking or reserving resources, we utilized a library called PouchDB - a CouchDB inspired flat file database that runs in the browser and on a server. Apart from my external duty at expert, I wrote several WebApps using Vue.js 2 (frontend) and Laravel (backend). One of my personal highlights of this time was the design and development of an app called replaceplastic. The idea of the app was enabling end-customers to report products to their manufacturers for being packaged with too much plastic. Technology-wise, the app was built using Vue.js 2 and released as a PWA, iOS and Android version, utilizing Apache Cordova as a cross-compiling tool. The backend was built using the PHP content management framework processwire and came with external APIs and synchronization to a product database (OpenGTINDB). The PWA made use of the getUserMedia Browser API to scan barcodes on the device using a camera, for Android and iOS, the respective native camera plugins were used.",
+    "skills": [
+      "Angular.js",
+      "Angular",
+      "Apache Cordova",
+      "Vue.js 2",
+      "PWA",
+      "Laravel",
+      "node.js",
+      "koa.js",
+      "TypeScript"
+    ],
+    "software": ["XCode", "VSCode"]
+  },
+  "7": {
+    "employerId": "3",
+    "title": "Senior Frontend-Developer",
+    "dateStart": 1561932000000,
+    "dateEnd": 1727733600000,
+    "shortDescription": "Architecture and technology decisions for the frontend of a greenfield product, building a Component library with storybook, optimizing realtime performance for large datasets, building a map using WebGL, Microfrontends with Module Federation",
+    "description": "Coming from a project-based agency background where most of the products we launched were initially created by us and later on taken over by our customers, this was my first experience as a resident employee in product development. I joined as the first frontend developer in this greenfield startup to outline and implement the frontend architecture and did the groundwork as well as technology decisions. I was also responsible for UX and design work until later on colleagues for those roles were hired. Since most of the backend developers had a Java background and our customers would be big enterprises, I decided to use Angular as our frontend weapon of choice. We had ambitious goals for the team- and product growth; therefore, I started implementing a design system and a component library based on Storybook right off the bat. Since the product steered autonomous robots in a factory setting, we also needed to visualize ongoing processes not only as lists but in a map view. Given that our product wouldn't have access to the internet in on-premise installations and thus the big players like Google Maps or Mapbox fell short, we built our own implementation. In the first iteration, the map was developed using d3.js and SVG-based angular components. As the product grew and matured, it became clear that SVG and specifically the DOM were way too slow to handle the large amounts of updates and data we needed (i.e. moving and positioning hundreds of robot visualizations in realtime while zooming and panning a map with thousands of roads and POIs on it). After some research for better alternatives, we decided to use Pixi.js, a 2D WebGL-based rendering engine created for authoring browser games. This turned out to be a good choice since we could offload the heavy rendering part to the GPU. Speaking of performance: A lot of optimization also went into selectors and queries for the frontend store (NGXS) to the point that we extracted some of the heavy operations to webworkers and used webAssembly for comparing arrays. Although at first, the frontend started as a monolith in a mono repo (managed using nx), we eventually moved to Module Federation and Microfrontends over time since this was a natural process in our growth and changes in the company (empowered teams). This way, every team was able to build its modules within our frontend ecosystem.",
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "PIXI.js",
+      "Storybook",
+      "RxJS",
+      "NGXS",
+      "Module federation",
+      "Microfrontends"
+    ],
+    "software": ["Figma", "Jira", "Confluence", "IntelliJ Ultimate"]
+  }
+}

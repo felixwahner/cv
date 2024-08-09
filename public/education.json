@@ -1,0 +1,34 @@
+{
+  "1": {
+    "type": "Elementary School",
+    "name": "Grundschule Gleidingen",
+    "location": "30880 Gleidingen",
+    "dateStart": 554774400000,
+    "dateEnd": 680918400000,
+    "diploma": null
+  },
+  "2": {
+    "type": "Middle School",
+    "name": "Orientierungsstufe Rathausstraße",
+    "location": "30880 Laatzen",
+    "dateStart": 681004800000,
+    "dateEnd": 744076800000,
+    "diploma": null
+  },
+  "3": {
+    "type": "High School",
+    "name": "Albert-Einstein-Schule KGS Laatzen",
+    "location": "30880 Laatzen",
+    "dateStart": 744163200000,
+    "dateEnd": 965001600000,
+    "diploma": "Fachhochschule entrance qualification"
+  },
+  "4": {
+    "type": "Apprenticeship",
+    "name": "MMBbS - Multi-Media Berufsbildende Schulen",
+    "location": "30539 Hannover",
+    "dateStart": 1059688800000,
+    "dateEnd": 1136070000000,
+    "diploma": "Mediengestalter für Digital- und Printmedien (FR: Mediendesign / Non-Print)"
+  }
+}
