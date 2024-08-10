@@ -47,6 +47,8 @@
 }
 
 body {
+  border-top: 20px solid var(--purple-brand);
+  border-bottom: 40px solid var(--purple-brand);
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);

@@ -18,7 +18,7 @@ const props = defineProps<{
 @media (min-width: 1080px)  {
   .container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 4px;
   }
 }
@@ -28,7 +28,6 @@ strong {
   font-weight: 600;
   width: 15%;
   text-transform: uppercase;
-  margin-top: 12px;
 }
 @media (min-width: 1080px)  {
   strong {
@@ -40,6 +39,7 @@ strong {
   display: inline;
   margin: 0;
   padding: 0;
+  width: 85%;
 }
 .taglist-entry {
   display: inline;

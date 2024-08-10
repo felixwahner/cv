@@ -83,7 +83,7 @@ setTimeout(() => {
 h2,
 p,
 address {
-  margin-bottom: 2em;
+  margin-bottom: 1.5rem;
 }
 h2 {
   color: var(--purple-brand);
@@ -99,8 +99,9 @@ img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   margin-right: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 address {
   font-style: normal;
@@ -115,5 +116,6 @@ strong {
   background: rgb(246 246 246);
   padding: 24px;
   border-radius: 12px;
+  margin-top: 48px;
 }
 </style>

@@ -9,7 +9,7 @@ defineProps<{
 <style scoped>
 .fakelink {
   display: block;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgb(246 246 246);
   margin-top: 10px;
   padding-top: 5px;
   text-decoration: none;

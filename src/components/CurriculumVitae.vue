@@ -2,14 +2,18 @@
 import { useJobStore } from '@/stores/job'
 import JobMilestone from './JobMilestone.vue'
 import Timeline from './Timeline.vue'
+import WorkExperienceCounter from './WorkExperienceCounter.vue'
 import EducationMilestone from './EducationMilestone.vue'
 import { useEducationStore } from '@/stores/education'
+import { storeToRefs } from 'pinia';
 const jobStore = useJobStore()
 const educationStore = useEducationStore()
+const { getWorkExperienceDuration, getJobIds }  = storeToRefs(jobStore);
 </script>
 <template>
   <h2>Curriculum Vitae</h2>
   <Timeline>
+    <WorkExperienceCounter :duration="getWorkExperienceDuration" :jobAmount="getJobIds.length"></WorkExperienceCounter>
     <JobMilestone v-for="id in jobStore.getJobIds" :jobId="id" :key="id" />
   </Timeline>
   <h2>Education</h2>

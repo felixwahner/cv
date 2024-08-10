@@ -31,11 +31,13 @@ h1 {
   line-height: 1;
   padding-left: 24px;
 }
+
+
 h2 {
   color: var(--purple-brand);
   padding-left: 24px;
   line-height: 1;
-  margin-bottom: 48px;
+  margin-bottom: 68px;
   font-size: 1.3rem;
 }
 @media (min-width: 1080px)  {
@@ -57,9 +59,7 @@ h2 {
   margin-bottom: 24px;
 }
 .main {
-  border-top: 20px solid var(--purple-brand);
-  border-bottom: 40px solid var(--purple-brand);
-  padding: 24px 0 48px 0;
+  padding: 48px 0;
   margin: 0 24px;
   width: 100%;
   max-width: 1280px;
@@ -93,6 +93,11 @@ h2 {
     line-height: 0.5;
     padding-left: 12px;
     color: #fff;
+  }
+}
+@media (min-width: 1312px)  {
+  .header::before {
+    left: 0;
   }
 }
 </style>

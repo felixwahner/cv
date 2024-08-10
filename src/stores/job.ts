@@ -1,25 +1,20 @@
 import { defineStore } from 'pinia'
-import type { EmployersDto, Jobs, JobsDto } from './job.model'
+import type { EmployersDto, Job, JobDto, Jobs, JobsDto } from './job.model'
 import ky from 'ky'
-import { format, formatDistance } from 'date-fns'
+import { format, formatDistance, parse } from 'date-fns'
 
 interface State {
-  jobs: Jobs
+  jobs: JobsDto
   employers: EmployersDto
 }
 
-const transformJobsDto = (jobs: JobsDto): Jobs => {
-  const transformedJobs: Jobs = {}
-  Object.keys(jobs).forEach((jobKey) => {
-    const currentJob = jobs[jobKey]
-    transformedJobs[jobKey] = {
-      ...jobs[jobKey],
-      dateStart: format(currentJob.dateStart, 'MM/yyyy'),
-      dateEnd: format(currentJob.dateEnd, 'MM/yyyy'),
-      dateSpan: formatDistance(currentJob.dateStart, currentJob.dateEnd)
-    }
-  })
-  return transformedJobs
+const transformJobDto = (job: JobDto): Job => {
+  return {
+    ...job,
+    dateStart: format(job.dateStart, 'MM/yyyy'),
+    dateEnd: format(job.dateEnd, 'MM/yyyy'),
+    dateSpan: formatDistance(job.dateStart, job.dateEnd)
+  }
 }
 
 export const useJobStore = defineStore('job', {
@@ -34,10 +29,21 @@ export const useJobStore = defineStore('job', {
       return Object.keys(this.jobs).reverse()
     },
     getJobById(state) {
-      return (id?: string) => (id ? state.jobs[id] : void 0)
+      return (id?: string): Job => (id ? transformJobDto(state.jobs[id]) : void 0)
     },
     getEmployerById(state) {
       return (id?: string) => (id ? state.employers[id] : void 0)
+    },
+    getWorkExperienceDuration(): string | null {
+      const sortedDates: Array<string> = Object.values(this.jobs)
+        .reduce((acc: Array<string>, job: Job): Array<string> => {
+          console.log([...acc, job.dateStart, job.dateEnd])
+          return [...acc, job.dateStart, job.dateEnd]
+        }, [])
+        .sort()
+      return sortedDates.length
+        ? formatDistance(sortedDates[0], sortedDates[sortedDates.length - 1])
+        : null
     }
   },
   actions: {
@@ -46,7 +52,7 @@ export const useJobStore = defineStore('job', {
         ky(`${import.meta.env.BASE_URL}employers.json`).json<EmployersDto>(),
         ky(`${import.meta.env.BASE_URL}jobs.json`).json<JobsDto>()
       ])
-      this.jobs = transformJobsDto(jobs)
+      this.jobs = jobs
       this.employers = employers
     }
   }

@@ -18,7 +18,7 @@ const { getOpenDetailsById } = storeToRefs(settingsStore)
 <template>
   <article class="card">
     <div class="subtitle">
-      <strong>{{ employer?.name }}</strong>
+      <strong class="employer"><a target="_blank" v-bind:href="employer?.url">{{ employer?.name }}</a></strong>
       ({{ job?.dateSpan }}: {{ job?.dateStart }} - {{ job?.dateEnd }})
     </div>
     <h3>{{ job?.title }}</h3>
@@ -48,6 +48,9 @@ summary {
 }
 h3 {
   font-weight: 600;
+}
+.employer {
+  font-family: Poly, serif;
 }
 details {
   font-size: 1rem;
