@@ -1,14 +1,17 @@
 {
   "1": {
     "name": "w3design.",
-    "url": "https://web.archive.org/web/20130222234840/http://www.w3design.de/"
+    "url": "https://web.archive.org/web/20130222234840/http://www.w3design.de/",
+    "logoUrl": "logos/w3design.png"
   },
   "2": {
     "name": "neuwaerts",
-    "url": "https://www.neuwaerts.de"
+    "url": "https://www.neuwaerts.de",
+    "logoUrl": "logos/neuwaerts.jpg"
   },
   "3": {
     "name": "SYNAOS",
-    "url": "https://www.synaos.com"
+    "url": "https://www.synaos.com",
+    "logoUrl": "logos/synaos.png"
   }
 }

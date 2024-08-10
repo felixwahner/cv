@@ -20,6 +20,7 @@
   "dependencies": {
     "date-fns": "^3.6.0",
     "ky": "^1.4.0",
+    "lucide-vue-next": "^0.427.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"

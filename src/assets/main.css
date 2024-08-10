@@ -17,7 +17,7 @@ h2,
 h3 {
   font-family: 'Poly', serif;
   font-optical-sizing: auto;
-  font-style: italic;
+  font-style: normal;
   color: var(--vt-c-black-mute);
 }
 h1 {
@@ -31,7 +31,7 @@ h3 {
   font-size: 1.4rem;
 }
 @media (hover: hover) {
-  a:hover {
+  a:hover:not(.nostyle) {
     background-color: rgba(151, 18, 84, 0.2);
   }
 }

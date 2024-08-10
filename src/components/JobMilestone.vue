@@ -18,7 +18,7 @@ const { getOpenDetailsById } = storeToRefs(settingsStore)
 <template>
   <article class="card">
     <div class="subtitle">
-      <strong class="employer"><a target="_blank" v-bind:href="employer?.url">{{ employer?.name }}</a></strong>
+      <strong class="employer"><a target="_blank" title="Opens in a new window" v-bind:href="employer?.url">{{ employer?.name }}</a></strong>
       ({{ job?.dateSpan }}: {{ job?.dateStart }} - {{ job?.dateEnd }})
     </div>
     <h3>{{ job?.title }}</h3>
@@ -59,6 +59,7 @@ details {
 }
 .description {
   margin-top: 12px;
+  margin-bottom: 24px;
 }
 .subtitle {
   position:relative;

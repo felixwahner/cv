@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
-import type { EmployersDto, Job, JobDto, Jobs, JobsDto } from './job.model'
+import type { EmployersDto, Job, JobDto, JobsDto, EmployerDto } from './job.model'
 import ky from 'ky'
-import { format, formatDistance, parse } from 'date-fns'
+import { format, formatDistance } from 'date-fns'
 
 interface State {
   jobs: JobsDto
@@ -29,18 +29,18 @@ export const useJobStore = defineStore('job', {
       return Object.keys(this.jobs).reverse()
     },
     getJobById(state) {
-      return (id?: string): Job => (id ? transformJobDto(state.jobs[id]) : void 0)
+      return (id?: string): Job | undefined => (id ? transformJobDto(state.jobs[id]) : void 0)
     },
     getEmployerById(state) {
-      return (id?: string) => (id ? state.employers[id] : void 0)
+      return (id?: string): EmployerDto | undefined => (id ? state.employers[id] : void 0)
     },
     getWorkExperienceDuration(): string | null {
-      const sortedDates: Array<string> = Object.values(this.jobs)
-        .reduce((acc: Array<string>, job: Job): Array<string> => {
-          console.log([...acc, job.dateStart, job.dateEnd])
+      const sortedDates: Array<Date> = Object.values(this.jobs).reduce(
+        (acc: Array<Date>, job: JobDto): Array<Date> => {
           return [...acc, job.dateStart, job.dateEnd]
-        }, [])
-        .sort()
+        },
+        [] as Array<Date>
+      )
       return sortedDates.length
         ? formatDistance(sortedDates[0], sortedDates[sortedDates.length - 1])
         : null

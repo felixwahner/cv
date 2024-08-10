@@ -11,9 +11,9 @@ const educationStore = useEducationStore()
 const { getWorkExperienceDuration, getJobIds }  = storeToRefs(jobStore);
 </script>
 <template>
-  <h2>Curriculum Vitae</h2>
+  <h2>Professional experience</h2>
   <Timeline>
-    <WorkExperienceCounter :duration="getWorkExperienceDuration" :jobAmount="getJobIds.length"></WorkExperienceCounter>
+    <WorkExperienceCounter :duration="getWorkExperienceDuration" :jobAmount="getJobIds.length + ''"></WorkExperienceCounter>
     <JobMilestone v-for="id in jobStore.getJobIds" :jobId="id" :key="id" />
   </Timeline>
   <h2>Education</h2>

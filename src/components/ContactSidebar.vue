@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { intervalToDuration } from 'date-fns'
 import { computed } from 'vue'
+import { NotebookTabs, Download } from 'lucide-vue-next';
 
 const ageCounter = computed(() => {
   return intervalToDuration({
@@ -11,24 +12,30 @@ const ageCounter = computed(() => {
 setTimeout(() => {
   ageCounter.effect.run()
 }, 1000)
+
 </script>
 
 <template>
   <div class="outer">
-    <h2>About me</h2>
-    <div vocab="https://schema.org/" typeof="Person">
-      <div class="contact">
-        <img v-bind:src="'./fw.png'" alt="C`est moi" width="200" height="200" />
-        <address property="address" typeof="PostalAddress">
-          <strong class="name" property="name">Felix Wahner</strong><br />
-          <span property="streetAddress">Wichmannstraße 27</span><br />
-          <span property="postalCode">30519</span> <span property="addressLocality">Hannover</span
-          ><br />
-          Tel:<a property="telephone" href="tel:+491621061659">(+49) 162 1061659</a><br />
-          eMail:<a property="email" href="mailto:felix@o315.de">felix@o315.de</a>
-        </address>
+    <h2>Contact info</h2>
+    <a class="vcard-link nostyle" download href="vcard_felix_wahner.vcf" title="Download vcard">
+      <Download class="download-icon" color="currentColor" :size="32" :stroke-width="1" />
+      <div class="vcard" vocab="https://schema.org/" typeof="Person">
+        <div class="contact">
+          <NotebookTabs class="contact-icon" color="currentColor" :size="48" :stroke-width="1" />
+          <address property="address" typeof="PostalAddress">
+            <strong class="name" property="name">Felix Wahner</strong><br />
+            <span property="streetAddress">Wichmannstraße 27</span><br />
+            <span property="postalCode">30519</span> <span property="addressLocality">Hannover</span
+            ><br /><br />
+            Tel:<a property="telephone" href="tel:+491621061659">(+49) 162 1061659</a><br />
+            eMail:<a property="email" href="mailto:felix@o315.de">felix@o315.de</a><br />
+            <a target="_blank" href="https://www.linkedin.com/in/felix-wahner-aa083b83/">LinkedIn</a> |  <a target="_blank" href="https://www.xing.com/profile/Felix_Wahner">XING</a>
+          </address>
+        </div>
       </div>
-    </div>
+    </a>
+    <h2>About me</h2>
     <p>
       Since I first got my hands dirty on a C64 keyboard, I have been in love with technology. I
       started building websites when
@@ -94,14 +101,35 @@ p {
 }
 .contact {
   display: flex;
+  padding: 0;
+  &:hover {
+    background-color: transparent;
+  }
 }
-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-  margin-right: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+.vcard-link {
+  display: block;
+  color: inherit;
+  position: relative;
+  .download-icon {
+    opacity: 0;
+    position: absolute;
+    right: 24px;
+    top: 14px;
+    color: var(--purple-brand);
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    .download-icon {
+      opacity: 1;
+      top: 16px
+    }
+  }
+}
+.contact-icon {
+  color: #ccc;
+  position: relative;
+  top: 6px;
+  margin-left: 12px;
 }
 address {
   font-style: normal;
@@ -109,13 +137,25 @@ address {
 strong {
   font-weight: 500;
 }
+.vcard {
+  margin-bottom: 36px;
+  padding: 16px 8px 8px 8px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
 .subtle {
   color: rgba(0, 0, 0, 0.5);
+}
+.contact-icon {
+  color: #ccc;
+  margin-right: 24px;
 }
 .outer {
   background: rgb(246 246 246);
   padding: 24px;
   border-radius: 12px;
-  margin-top: 48px;
+  margin-top: 82px;
 }
 </style>

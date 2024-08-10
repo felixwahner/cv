@@ -30,8 +30,9 @@ export interface Jobs {
 }
 
 export interface EmployerDto {
-  id: number
   name: string
+  url: string
+  logoUrl: string
 }
 export interface EmployersDto {
   [key: string]: EmployerDto
