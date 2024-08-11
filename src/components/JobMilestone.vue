@@ -2,18 +2,15 @@
 import { useJobStore } from '@/stores/job'
 import type { EmployerDto } from '@/stores/job.model'
 import TagList from './TagList.vue'
-import { useSettingsStore } from '@/stores/settings'
-import { storeToRefs } from 'pinia'
 import ReadMore from './ReadMore.vue'
+import { ref } from 'vue'
 const props = defineProps<{
   jobId: string
 }>()
 const jobStore = useJobStore()
 const job = jobStore.getJobById(props.jobId)
 const employer: EmployerDto | undefined = jobStore.getEmployerById(job?.employerId)
-
-const settingsStore = useSettingsStore()
-const { getOpenDetailsById } = storeToRefs(settingsStore)
+let open = ref(false);
 </script>
 <template>
   <article class="card">
@@ -22,10 +19,10 @@ const { getOpenDetailsById } = storeToRefs(settingsStore)
       ({{ job?.dateSpan }}: {{ job?.dateStart }} - {{ job?.dateEnd }})
     </div>
     <h3>{{ job?.title }}</h3>
-    <details v-bind:open="getOpenDetailsById(jobId)" @click="settingsStore.toggleOpenState(jobId)">
+    <details @click="open = !open">
       <summary>
         {{ job?.shortDescription }}
-        <ReadMore v-bind:open="getOpenDetailsById(jobId)"></ReadMore>
+        <ReadMore v-bind:open="open"></ReadMore>
       </summary>
       <div class="description">
         {{ job?.description }}
